@@ -8,8 +8,11 @@
 
 - A short word of advice on learning. Learn the actual underlying technologies, before learning abstractions. Don't learn jQuery, learn the DOM. Don't learn SASS, learn CSS. Don't learn JSX, learn HTML. Don't learn TypeScript, learn JavaScript. Don't learn Handlebars, learn JavaScript ES6 templates. Don't just use Bootstrap, learn UI patterns.
 
+![Timeline of Web Browsers](https://upload.wikimedia.org/wikipedia/commons/7/74/Timeline_of_web_browsers.svg)
+
 **Rendering**
 - http://frontendbabel.info/articles/webpage-rendering-101/
+- Forces the layout / reflow - https://gist.github.com/paulirish/5d52fb081b3570c81e3a
 
 ### Service Workers
 - is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. Today, they already include features like push notifications and background sync.
