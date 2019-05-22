@@ -64,6 +64,10 @@
 ### console
  - https://medium.freecodecamp.org/how-to-use-the-javascript-console-going-beyond-console-log-5128af9d573b
 
+ ### Other Tools
+ - [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+ - [Dr Link Check](https://www.drlinkcheck.com/)
+
 # Webhooks
 - send a signal when a specified event occurs
 - The listener is the URL which receives the webhooks and performs a predefined action after that.
