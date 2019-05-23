@@ -38,27 +38,30 @@
  |226 IM Used| |409 Conflict|510 Not Extended
  | | |410 Gone|511 Network Authentication Required
  | | |411 Length Required|599 Network Connect Timeout Error
- | | |412 Precondition Failed| 
- | | |413 Payload Too Large| 
- | | |414 Request-URI Too Long| 
- | | |415 Unsupported Media Type| 
- | | |416 Requested Range Not Satisfiable| 
- | | |417 Expectation Failed| 
- | | |418 I'm a teapot| 
- | | |421 Misdirected Request| 
- | | |422 Unprocessable Entity| 
- | | |423 Locked| 
- | | |424 Failed Dependency| 
- | | |426 Upgrade Required| 
- | | |428 Precondition Required| 
- | | |429 Too Many Requests| 
- | | |431 Request Header Fields Too Large| 
- | | |444 Connection Closed Without Response| 
- | | |451 Unavailable For Legal Reasons| 
- | | |499 Client Closed Request| 
+ | | |412 Precondition Failed|
+ | | |413 Payload Too Large|
+ | | |414 Request-URI Too Long|
+ | | |415 Unsupported Media Type|
+ | | |416 Requested Range Not Satisfiable|
+ | | |417 Expectation Failed|
+ | | |418 I'm a teapot|
+ | | |421 Misdirected Request|
+ | | |422 Unprocessable Entity|
+ | | |423 Locked|
+ | | |424 Failed Dependency|
+ | | |426 Upgrade Required|
+ | | |428 Precondition Required|
+ | | |429 Too Many Requests|
+ | | |431 Request Header Fields Too Large|
+ | | |444 Connection Closed Without Response|
+ | | |451 Unavailable For Legal Reasons|
+ | | |499 Client Closed Request|
 
 ### Service Workers
 - is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. Today, they already include features like push notifications and background sync.
+
+- Note, the service worker is served from the root directory, not from a /scripts/ directory. This is the easiest way to set the scope of your service worker. The scope of the service worker determines which files the service worker controls, in other words, from which path the service worker will intercept requests. The default scope is the location of the service worker file, and extends to all directories below. So if service-worker.js is located in the root directory, the service worker will control requests from all web pages at this domain.
+
 
 ## Debugging
 ### console
@@ -67,6 +70,7 @@
  ### Other Tools
  - [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
  - [Dr Link Check](https://www.drlinkcheck.com/)
+ - [Qualys]() - SSL Reporting
 
 # Webhooks
 - send a signal when a specified event occurs
