@@ -81,3 +81,9 @@
 
 - References
     - https://www.chargebee.com/blog/what-are-webhooks-explained/
+
+# Memcached
+- Memcached is an in-memory key-value store for small arbitrary data (strings, objects) from results of database calls, API calls, or page rendering.
+
+- References
+    - https://github.com/memcached/memcached/wiki/Overview
