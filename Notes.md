@@ -87,3 +87,25 @@
 
 - References
     - https://github.com/memcached/memcached/wiki/Overview
+
+# Notes
+- **checksum** - the idea of a checksum or a cryptographic hash function might seem complicated and not possibly worth the effort, but we'd like to convince you otherwise! Checksums really aren't that hard to understand or create.
+
+Let's start with a simple example, hopefully showcasing the power of checksums to prove that something has changed. The MD5 checksum for the following phrase is a long string of characters that represent that sentence.
+
+```
+This is a test.
+120EA8A25E5D487BF68B5F7096440019
+```
+
+For our purposes here, they essentially equal each other. However, make even a slight change, like removing just the period, will produce the completely different checksum.
+
+```
+This is a test
+CE114E4501D2F4E2DCEA3E17B546F339
+```
+
+As you can see, even a minuscule change in the file will produce a vastly different checksum, making it very clear that one is not like the other.
+
+References:
+- https://www.lifewire.com/what-does-checksum-mean-2625825
