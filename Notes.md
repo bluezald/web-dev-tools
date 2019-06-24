@@ -72,6 +72,12 @@
  - [Dr Link Check](https://www.drlinkcheck.com/)
  - [Qualys]() - SSL Reporting
 
+# Backend
+
+### cURL
+- curl is a tool to transfer data from or to a server, using one of the supported protocols (DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET and TFTP). The command is designed to work without user interaction.
+
+
 # Webhooks
 - send a signal when a specified event occurs
 - The listener is the URL which receives the webhooks and performs a predefined action after that.

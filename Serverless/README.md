@@ -1,6 +1,7 @@
 # Serverless
 - SaaS - Self-service with 0 operations
 - an event driven, utility based, stateless, code execution environment in which you write code and consume services
+- Easily create server code without worrying about managing servers yourself
 
 ### What you do in Serverless Systems
 - Write less code - // the more code you have the more risk you have
