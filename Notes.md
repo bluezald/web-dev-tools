@@ -62,6 +62,19 @@
 
 - Note, the service worker is served from the root directory, not from a /scripts/ directory. This is the easiest way to set the scope of your service worker. The scope of the service worker determines which files the service worker controls, in other words, from which path the service worker will intercept requests. The default scope is the location of the service worker file, and extends to all directories below. So if service-worker.js is located in the root directory, the service worker will control requests from all web pages at this domain.
 
+### Token
+#### JWT (JSON Web Token)
+- is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with HMAC algorithm) or a public/private key pair using RSA.
+
+#### OAuth vs JWT
+- OAuth 2.0 defines a protocol, i.e. specifies how tokens are transferred, JWT defines a token format.
+
+- OAuth 2.0 and "JWT authentication" have similar appearance when it comes to the (2nd) stage where the Client presents the token to the Resource Server: the token is passed in a header.
+
+- But "JWT authentication" is not a standard and does not specify how the Client obtains the token in the first place (the 1st stage). That is where the perceived complexity of OAuth comes from: it also defines various ways in which the Client can obtain an access token from something that is called an Authorization Server.
+
+- So the real difference is that JWT is just a token format, OAuth 2.0 is a protocol (that may use a JWT as a token format).
+- Answer from here: https://stackoverflow.com/a/39911472
 
 ## Debugging
 ### console
