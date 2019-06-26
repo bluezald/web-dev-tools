@@ -10,15 +10,49 @@
 <body>
     <div id="app">
         {{ message }}
+
+        <span v-if="seen">Now you see me</span>
+        <ol>
+            <li v-for="todo in todos">{{ todo.text }}</li>
+        </ol>
+        <ol>
+            <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id">
+            </todo-item>
+        </ol>
+
+        <button v-on:click="reverseMessage">Reverse Message</button>
     </div>
-    <span v-if="seen">Now you see me</span>
+
 
     <script>
+        Vue.component('todo-item', {
+            props: ['todo'],
+            template: '<li>{{ todo.text }}</li>'
+        })
+
         var app = new Vue({
             el: '#app',
             data: {
                 message: 'Hello Vue!',
-                seen: true
+                seen: true,
+                todos: [
+                    { text: 'Learn Javascript' },
+                    { text: 'Learn Vue' },
+                    { text: 'Learn React' }
+                ],
+                groceryList: [
+                    { id: 0, text: 'Vegetables' },
+                    { id: 1, text: 'Cheese' },
+                    { id: 2, text: 'Meat' },
+                ]
+            },
+            methods: {
+                reverseMessage: function() {
+                    this.message = this.message.split('').reverse().join('');
+                }
             }
         })
     </script>
