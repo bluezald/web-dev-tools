@@ -28,3 +28,9 @@
 - Data Pipelines
 - Batch Processing
 - Infrastructure automation
+
+## FaaS
+- When deployed as PaaS, an application is typically running on at least one server at all times. With FaaS, it may not be running at all until the function needs to be executed. It starts the function within a few milliseconds and then shuts it down.
+- Both provide the ability to easily deploy an application and scale it, without having to provision or configure servers.
+- References:
+    - https://stackify.com/function-as-a-service-serverless-architecture/
