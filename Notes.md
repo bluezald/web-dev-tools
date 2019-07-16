@@ -57,6 +57,15 @@
  | | |451 Unavailable For Legal Reasons|
  | | |499 Client Closed Request|
 
+### HTTP/2
+- The impact of HTTP/2 is huge, but first, let’s recap on some of the commonly known optimisation techniques used in HTTPS/1.1 — Domain Sharding and Asset Concatenation.
+- **Sharding** is a performance method where you serve your service on as many different hosts as possible.
+- Youtube used to do it by having assets on multiple domains (i1.ytimg.com, i2.ytimg.com etc.) they serve via HTTP/2 now
+- In the HTTPS/1.x world, downloading a single file would be much faster than downloading multiple files at the same time. **Asset concatenation** is a optimisation technique that helps by combining all your multiple CSS and JS files into a single CSS and JS file.
+
+- References:
+    - https://medium.com/@jacobtan/understanding-http-2-and-its-caveats-1e8200519c4c
+
 ### Service Workers
 - is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. Today, they already include features like push notifications and background sync.
 
