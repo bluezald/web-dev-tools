@@ -20,3 +20,8 @@ Don’t use arrow functions on an options property or callback, such as created:
 ## Components
 - are reusable Vue Instances with a name.
 - the **data** in a component is a function so it can maintain an independent state.
+
+# Advance Topics
+
+## Vuex
+![Vuex State Management](https://raw.githubusercontent.com/bluezald/web-dev-tools/master/Random/Vue/vuex-state-management.png)
