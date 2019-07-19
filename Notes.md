@@ -66,6 +66,14 @@
 - References:
     - https://medium.com/@jacobtan/understanding-http-2-and-its-caveats-1e8200519c4c
 
+- APIs are categorized as simple object access protocol (SOAP), remote procedure call (RPC), and representational state transfer (REST or RESTful). SOAP APIs use lower-level protocols like HTTP to communicate between a service’s shared elements. RPC APIs are mainly used in client-server models and allow a program to request a service without compromising network details. REST, the most popular API type, can be used with nearly any protocol including HTTP.
+
+### Microservices
+-  stateful and stateless. Stateful microservices save session information within the code. They are suitable for transactions that require more than one database, such as interactive gaming. Stateless microservices do not retain the session state between requests. They do not link requests in the way that stateful microservices do. Stateless microservices are used for transactions that return specific results, such as checking a mobile service’s prepaid balance using a USSR code
+
+- References:
+    - https://it.toolbox.com/guest-article/demystifying-apis-and-microservices-discover-the-importance-of-apis-and-microservices-to-modern-businesses
+
 ### Service Workers
 - is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. Today, they already include features like push notifications and background sync.
 
