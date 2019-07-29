@@ -25,3 +25,49 @@ Don’t use arrow functions on an options property or callback, such as created:
 
 ## Vuex
 ![Vuex State Management](https://raw.githubusercontent.com/bluezald/web-dev-tools/master/Random/Vue/vuex-state-management.png)
+
+## Router
+- Setup
+```js
+// inside router/index.js
+Vue.use(Router);
+
+export const router = new Router({
+  mode: 'history',
+  routes: [
+    {
+      // ...
+    }
+
+    // Default route
+    { path: '*', redirect: '/' }
+  ],
+});
+
+router.beforeEach((to, from, next) => {
+  const publicPages = [
+    '/login',
+    '/register',
+  ];
+  const isPrivatePage = !publicPages.includes(to.path);
+  const isLoggedIn = localStorage.getItem('accessToken');
+
+  if (isPrivatePage && !isLoggedIn) {
+    return next('/login');
+  }
+
+  next();
+})
+```
+
+- Access params
+```js
+// url/endpoint/id
+const { id } = this.$route.params;
+```
+
+- Access query
+```js
+// url/endpoint?token="..."
+const { token } = this.$route.query; // access the query token
+```
