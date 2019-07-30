@@ -21,6 +21,20 @@ Don’t use arrow functions on an options property or callback, such as created:
 - are reusable Vue Instances with a name.
 - the **data** in a component is a function so it can maintain an independent state.
 
+## Essential Vue Tools
+
+- Vue CLI
+```
+vue create foo
+```
+- Documentation and API
+  - https://vuejs.org/v2/guide/
+  - https://vuejs.org/v2/api/
+
+- Vue Extension for Chrome
+- Debugger on VSCode
+
+
 # Advance Topics
 
 ## Vuex
