@@ -85,3 +85,10 @@ const { id } = this.$route.params;
 // url/endpoint?token="..."
 const { token } = this.$route.query; // access the query token
 ```
+
+## Build Targets
+```sh
+vue-cli-service build --target app # Default / Application
+vue-cli-service build --target lib # Library
+vue-cli-service build --target wc # Web Component
+```
