@@ -18,6 +18,9 @@ docker rmi -f docker-spa
 - Lets clean up after ourselves using the Docker rmi command and -f forcing it to remove our created image.
 - Note the **docker-spa** is the container name
 
+## Demo
+- In sample1 directory, make sure to run ```npm i``` before starting it.
+
 - References:
     - http://jasonwilder.com/blog/2014/10/13/a-simple-way-to-dockerize-applications/
     - https://github.com/jwilder/dockerize
