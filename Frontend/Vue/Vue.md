@@ -37,6 +37,48 @@ Don’t use arrow functions on an options property or callback, such as created:
 - are reusable Vue Instances with a name.
 - the **data** in a component is a function so it can maintain an independent state.
 
+## Binding
+- Binding Modifiers:
+    - Trim
+    - Number
+    - Lazy
+```html
+<!-- Removes whitespaces -->
+<input v-model.trim="query" />
+<!-- Converts to number -->
+<input v-model.number="query" />
+<!-- Lazily bind the input until input loses focus -->
+<input v-model.lazy="query" />
+```
+## Events
+
+### Modifiers
+- Event Propagation
+    - Bubbling - propagates from children to parent
+    - Capturing - propagates from parent to children
+```html
+<div v-on:click.capture="grandparentClick">
+    <div v-on:click.capture="parentClick">
+        <button v.on:click.capture="executeSearch">Search</button>
+    </div>
+</div>
+```
+- Prevent
+```html
+<!-- submit type button causes the page to reload -->
+<button type="submit" @click="executeSearch">Search</button>
+<!-- to prevent a click that does not load the page, you can use -->
+<button type="submit" @click.prevent="executeSearch">Search</button>
+```
+- Stop - ceases event propagation
+```html
+<!-- stops the event propagation -->
+<button type="submit" @click.stop="executeSearch">Search</button>
+```
+- Once - only detaches from the event handler to the containing element
+
+![Event Modifier Impact](https://raw.githubusercontent.com/bluezald/web-dev-tools/master/Random/Vue/event-modifier-impact.png)
+
 ## Essential Vue Tools
 
 - Vue CLI

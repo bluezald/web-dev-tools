@@ -87,3 +87,5 @@ public void ShouldDeclineUnderAgeApplicant()
 
 - References:
   - https://www.testingexcellence.com/choose-tests-automate/
+
+## Functional UI Testing
