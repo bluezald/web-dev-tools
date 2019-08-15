@@ -77,7 +77,24 @@ Don’t use arrow functions on an options property or callback, such as created:
 ```
 - Once - only detaches from the event handler to the containing element
 
-![Event Modifier Impact](https://raw.githubusercontent.com/bluezald/web-dev-tools/master/Random/Vue/event-modifier-impact.png)
+- Creating Key Modifiers
+```js
+Vue.config.keyCodes = {
+    f1: 112
+};
+```
+```html
+<!-- Usage -->
+<div v-on:keydown.f1="openInfo">
+</div>
+```
+- Mouse Button Events
+```html
+<div v-on:mousedown.left="onClick">
+</div>
+```
+
+![Event Modifier Impact](https://raw.githubusercontent.com/bluezald/web-dev-tools/master/Frontend/Vue/event-modifier-impact.png)
 
 ## Essential Vue Tools
 
@@ -153,6 +170,13 @@ vue-cli-service build --target wc # Web Component
 
 ## Testing
 - **shallowMount()** - is a Vue test utils method to create a shallow wrapper component (using shallow rendering to avoid rendering children components)
+
+- **Mounting Options**
+    - attachToDocument - Component will be attached to DOM when rendered if set to true
+        - make sure you use attachToDocument: true when working with window and DOM-Events.
+        - When attaching to the DOM, you should call **wrapper.destroy()** at the end of your test to remove the rendered elements from the document and destroy the component instance.
+
+
 - **beforeEach()** - is a Jest method which executes the callback argument before each of the tests
 
 ### Testing Methods that cover most types of unit testing

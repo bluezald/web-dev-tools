@@ -16,3 +16,9 @@ global installs have "links" created from the global bin/ directory (e.g. /usr/l
 
 - References:
   - https://stackoverflow.com/questions/50605219/difference-between-npx-and-npm
+
+## Kubernetes
+- Kubernetes automates the process of scaling, managing, updating and removing containers. In other words, it is a container orchestration platform.
+
+- References:
+  -  https://containerjournal.com/2019/01/14/kubernetes-vs-docker-a-primer/

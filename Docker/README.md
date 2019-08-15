@@ -3,6 +3,9 @@
 
 >Docker solves the infamous “it works on my machine” problem. Containers run the same wherever you start them!
 
+- Containerization is an approach of running applications on an OS such that the application is isolated from the rest of the system.
+- Docker is what enables us to run, create and manage containers on a single operating system.
+
 ## Dockerizing
 - Dockerizing an application is the process of converting an application to run within a Docker container.
 
