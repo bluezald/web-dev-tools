@@ -133,7 +133,7 @@ let app = (function() {
 - call and apply are similar, the difference is that apply accepts a list of arguments.
 
 ### bind()
-- assigns a new this to a function and copies that function
+- **assigns a new this** to a function and **copies that function**
 - Bind creates a new function that will have this set to the first parameter passed to bind().
 - Understanding bind, helps with the problem of 'losing this'
 - One good example: https://javascript.info/bind
@@ -153,6 +153,8 @@ let f = user.sayHi;
 setTimeout(f, 1000); // lost user context
 ```
 - ```func.bind(context, ...args)``` - returns a bound variant of  function ```func``` that fixes the context ```this```
+
+- scope refers to the viewability of variables and context refers to the accessibility of objects within a function
 
 ### Events
 - HTML events are "things" that happen to HTML elements.
