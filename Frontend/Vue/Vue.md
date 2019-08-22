@@ -96,6 +96,56 @@ Vue.config.keyCodes = {
 
 ![Event Modifier Impact](https://raw.githubusercontent.com/bluezald/web-dev-tools/master/Frontend/Vue/event-modifier-impact.png)
 
+- Reacting to Special Keys with function chaining
+```html
+<input type="search"
+    v-model.trim="query"
+    v-on:keypress.enter.prevent="executeNewSearch"
+    v-on:keyup.ctrl.enter="executeSearchInNewWindow"
+    placeholder="Please enter your query" />
+```
+
+### Watchers, Computed Properties and Filters
+- Watchers
+```js
+<script>
+export default {
+  data() {
+    return {
+      name: 'Flavio'
+    }
+  },
+  methods: {
+    changeName: function() {
+      this.name = 'Flavius'
+    }
+  },
+  watch: {
+    name: function() {
+      console.log(this.name)
+    }
+  }
+}
+</script>
+```
+
+- filters
+```js
+filters: {
+  capitalize: function (value) {
+    if (!value) return ''
+    value = value.toString()
+    return value.charAt(0).toUpperCase() + value.slice(1)
+  }
+}
+```
+
+
+- References:
+    - https://flaviocopes.com/vue-watchers/
+
+
+
 ## Essential Vue Tools
 
 - Vue CLI
