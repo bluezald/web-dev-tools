@@ -74,11 +74,6 @@
 - References:
     - https://it.toolbox.com/guest-article/demystifying-apis-and-microservices-discover-the-importance-of-apis-and-microservices-to-modern-businesses
 
-### Service Workers
-- is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. Today, they already include features like push notifications and background sync.
-
-- Note, the service worker is served from the root directory, not from a /scripts/ directory. This is the easiest way to set the scope of your service worker. The scope of the service worker determines which files the service worker controls, in other words, from which path the service worker will intercept requests. The default scope is the location of the service worker file, and extends to all directories below. So if service-worker.js is located in the root directory, the service worker will control requests from all web pages at this domain.
-
 ### Token
 #### JWT (JSON Web Token)
 - is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with HMAC algorithm) or a public/private key pair using RSA.
