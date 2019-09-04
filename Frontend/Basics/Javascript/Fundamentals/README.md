@@ -248,8 +248,8 @@ Arrays are non-primitive. If we assign a non-Primitive value to a variable, that
  ```
  - filter()
  ```javascript
- let filteredCars = cars.filter( 
-     car => car.style === "convertible" 
+ let filteredCars = cars.filter(
+     car => car.style === "convertible"
 );
  ```
 - every()
@@ -381,6 +381,8 @@ try {
     console.log("error: ", error);
 }
 ```
+
+### Async/Await
 
 ### Promises
 - represents a value which we do not have access just yet
