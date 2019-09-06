@@ -383,6 +383,29 @@ try {
 ```
 
 ### Async/Await
+- In an async context, a callback function is just a normal JavaScript function that is called by JavaScript when an asynchronous operation is finished.
+
+```js
+async function(f) {
+    return 1;
+}
+```
+- The word “async” before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically.
+- await works only inside async functions
+```js
+async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1000)
+  });
+
+  let result = await promise; // wait till the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+f();
+```
 
 ### Promises
 - represents a value which we do not have access just yet
