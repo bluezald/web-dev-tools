@@ -43,3 +43,16 @@
 ```
 npm i npm@latest -g
 ```
+
+## Publishing your own package
+- Setup Repo
+- Setup project with `npm init`
+- Publish your project by using `npm publish`
+- Tag your projectin git
+
+## Updating the version of your package project
+```
+npm version patch
+npm version minor
+npm version major
+```
