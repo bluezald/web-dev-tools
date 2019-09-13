@@ -56,3 +56,9 @@ npm version patch
 npm version minor
 npm version major
 ```
+Node.js - a wrapper around a VM like `V8`
+
+**CommonJS** - basically the `require` function in Node combined with the `module` object
+
+## Node's REPL
+- Read, Eval, Print and Loop
