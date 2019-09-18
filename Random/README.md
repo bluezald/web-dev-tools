@@ -22,3 +22,6 @@ global installs have "links" created from the global bin/ directory (e.g. /usr/l
 
 - References:
   -  https://containerjournal.com/2019/01/14/kubernetes-vs-docker-a-primer/
+
+## WebSocket
+- WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection

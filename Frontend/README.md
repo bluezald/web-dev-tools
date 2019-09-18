@@ -23,3 +23,8 @@ Web components are based on existing web standards. Features to support web comp
 
 - References:
   - https://www.webcomponents.org/introduction
+
+## OAuth
+- Making API calls with OAuth is a 2 step process
+  - Get a token by using your username and password
+  - Instead of your credentials you use OAuth token to make API calls
