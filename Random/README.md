@@ -25,3 +25,7 @@ global installs have "links" created from the global bin/ directory (e.g. /usr/l
 
 ## WebSocket
 - WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection
+
+## Storing Secrets in the Environment
+- storing database password, access tokens and credentials
+
