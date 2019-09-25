@@ -27,5 +27,8 @@ global installs have "links" created from the global bin/ directory (e.g. /usr/l
 - WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection
 
 ## Storing Secrets in the Environment
-- storing database password, access tokens and credentials
+- storing database password, access tokens and credentials -- add to a `.env` file
+
+## CORS
+- is a mechanism that allows restricted resources on a web page to be requested from another `domain` outside the domain from which the first resource was served.
 
