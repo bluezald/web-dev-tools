@@ -37,6 +37,20 @@ Don’t use arrow functions on an options property or callback, such as created:
 - are reusable Vue Instances with a name.
 - the **data** in a component is a function so it can maintain an independent state.
 
+### Slots
+- For example you have a component that accepts inner text or component
+```js
+<navigation-link url="/profile">
+  Your Profile
+</navigation-link>
+```
+- the template could look like this:
+```js
+<a v-bind:href="url" class="nav-link">
+  <slot></slot>
+</a>
+```
+
 ## Binding
 - Binding Modifiers:
     - Trim
@@ -50,6 +64,7 @@ Don’t use arrow functions on an options property or callback, such as created:
 <!-- Lazily bind the input until input loses focus -->
 <input v-model.lazy="query" />
 ```
+
 ## Events
 
 ### Modifiers
