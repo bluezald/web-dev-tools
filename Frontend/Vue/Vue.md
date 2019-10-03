@@ -51,6 +51,21 @@ Don’t use arrow functions on an options property or callback, such as created:
 </a>
 ```
 
+### Lazy Loading Components
+```js
+const Category = () => import('./theme/Category.vue')
+
+//...
+
+const router = new VueRouter({
+    routes: [
+        // .. Other Routes
+        { path: '/category/:id', name: 'category', component: Category },
+        // .. Other Routes
+    ]
+})
+```
+
 ## Binding
 - Binding Modifiers:
     - Trim
