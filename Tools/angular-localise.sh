@@ -12,8 +12,11 @@
 # Extracts all the text to localise inside messages.xlf
 # Then you can use all the words or phrases to translate
 
-awk '/<source>/,/<\/source>/p' ./messages.xlf > ./alltext.txt
-sed -i -e 's/\(<source>\|<\/source>\)//g' ./alltext.txt
+awk '/<source>/,/<\/source>/p' ./messages.xlf > ./text-target.txt
+find ./text-target.txt -type f -exec sed -i 's/<source>/<target>/g' {} \;
+find ./text-target.txt -type f -exec sed -i 's/<\/source>/<\/target>/g' {} \;
+cp ./text-target.txt ./text-raw.txt
+sed -i -e 's/\(<target>\|<\/target>\)//g' ./text-raw.txt
 
 # TODO: Create function to get all the translated text and save to a new
 # messages.locale.xlf where locale is a different locale like 'fr', 'sv', etc.
