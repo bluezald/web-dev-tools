@@ -32,4 +32,5 @@ global installs have "links" created from the global bin/ directory (e.g. /usr/l
 ## CORS
 - is a mechanism that allows restricted resources on a web page to be requested from another `domain` outside the domain from which the first resource was served.
 
-
+## CSR vs SSR
+- Nice and short explaination of CSR and SSR - https://dev.to/akhilaariyachandra/client-side-rendering-vs-server-side-rendering-2o4o?ref=devawesome.io

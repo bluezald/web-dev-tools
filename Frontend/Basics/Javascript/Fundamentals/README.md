@@ -129,10 +129,13 @@ let app = (function() {
 })();
 ```
 
-### call() and apply()
-- call and apply are similar, the difference is that apply accepts a list of arguments.
+### this
+- In a nested object, this refers to the current object scope of the method.
+- this was determined by its context—whether it is global, in an object, in a constructed function or class, or on a DOM event handler. However, using `call`, `apply`, or `bind`, you can **explicitly** determine what this should refer to.
 
-### bind()
+#### bind
+- can be particularly helpful when you want to use events to access properties of one class within another class. For example, if you were to write a simple game, you might separate the user interface and I/O into one class, and the game logic and state into another. Since the game logic would need to access input, such as key press and click, you would want to bind the events to access the this value of the game logic class.
+
 - **assigns a new this** to a function and **copies that function**
 - Bind creates a new function that will have this set to the first parameter passed to bind().
 - Understanding bind, helps with the problem of 'losing this'
@@ -155,6 +158,14 @@ setTimeout(f, 1000); // lost user context
 - ```func.bind(context, ...args)``` - returns a bound variant of  function ```func``` that fixes the context ```this```
 
 - scope refers to the viewability of variables and context refers to the accessibility of objects within a function
+
+
+#### call and apply
+- call and apply are very similar—they invoke a function with a specified this context, and optional arguments. The only difference between call and apply is that call requires the arguments to be passed in one-by-one, and apply takes the arguments as an array.
+- call and apply are similar, the difference is that apply accepts a list of arguments.
+
+- References:
+    - https://www.digitalocean.com/community/conceptual_articles/understanding-this-bind-call-and-apply-in-javascript
 
 ### Events
 - HTML events are "things" that happen to HTML elements.
