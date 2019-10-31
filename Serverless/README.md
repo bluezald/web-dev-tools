@@ -106,3 +106,8 @@ Sample Policy:
   ]
 }
 ```
+
+## S3 (Simple Storage Service)
+- Object Storage
+- Buckets - Global namespaces
+- Managed by AWS - one of the oldest products in AWS
