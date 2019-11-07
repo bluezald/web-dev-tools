@@ -62,7 +62,9 @@ scp -r -i keys.pem ./art-toolset/ ec2-user@13.251.162.166:/home/ec2-user/art-too
     - foundational structure
     - root resource
   - Cross Region Replication - Replication enables automatic, asynchronous copying of objects across Amazon S3 buckets. Buckets that are configured for object replication can be owned by the same AWS account or by different accounts. You can copy objects between different AWS Regions or within the same Region.
-
+  - Object Storage
+  - Buckets - Global namespaces
+  - Managed by AWS - one of the oldest products in AWS
 - CLI to upload files to `S3`
 ```
 aws s3 cp <local_folder> s3://<bucket>/<remote_folder> --recursive --exclude "<pattern>"
@@ -112,10 +114,20 @@ aws s3 cp <local_folder> s3://<bucket>/<remote_folder> --recursive --exclude "<p
 - Duplicate Infrastructure
 - CloudFormation Template
 - Automate the creation of infrastructure
+- There is a template from [here](https://github.com/ryanmurakami/pizza-luvrs/blob/master/cloudformation/pizza.template), use to demonstrate CloudFormation usage
+- Only provision the resources but does not know what to do with those resources
 
 ### Elastic Beanstalk
   - simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring.
-  - 
+  - automate the deployment of your application
+  - provisions resources and run your application
+  - an Elastic Beanstalk Application:
+    - represents a logical application
+    - single platform (Node.js, Java)
+    - Has one or more versions
+    - Has one or more envrionments - (Development environment or Production Environment)
+  - When you upload a web application, make sure to zip it directly inside the root contents of the project directory and not the directory itself
+
 
 ### Lambda - run small pieces of code without servers
   - FaaS - function as a service
@@ -126,6 +138,54 @@ aws s3 cp <local_folder> s3://<bucket>/<remote_folder> --recursive --exclude "<p
   - Platform Type
   - Triggers
   - Configuration
+
+  - Why Learn?
+      - Focus on application
+      - opportunity on IoT
+      - Growing relevance
+  - Pick a Function Runtime
+      - Python 2.7
+      - Node.js
+      - Java
+      - C#
+  - Size Limitations: Uncompressed code and dependencies < 250 MB
+  - Resource Limitations:
+      - Ephemeral Storage
+      - Max Execution of < 300 seconds in all Lambda functions
+      - Concurrent Lambda functions < 100
+  - Workarounds:
+      - Load and store files in S3 and process files in chunks
+      - Chain functions together
+  - Memory, CPI and VPC Considerations
+    - Memory - 128 MB - 1.5 GB
+    - CPU proportionally scales with memory
+    - Virtual Private Cloud
+
+### SES
+- Simple Email Service
+
+### IAM (Identity and Access Management)
+- Strong Pass
+- 2FA
+- Root account caution - make another admin account instead of using root
+
+- Create policies: https://awspolicygen.s3.amazonaws.com/policygen.html
+Sample Policy:
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1572419268820",
+      "Action": "ses:*",
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+```
+
+
 
 ### DynamoDB - Managed NoSQL
   - Unlimited, elastic storage
@@ -141,12 +201,18 @@ aws s3 cp <local_folder> s3://<bucket>/<remote_folder> --recursive --exclude "<p
   - **Subnet**
     - additional isolated area
 
+  - **Availability Zones** - distinct locations that are engineered to be isolated from failures in other AZs (Availability Zones)
+  - **CIDR** (Classless Inter-Domain Routing) - method for allocating IPA and IP routing
+    - slows the growth of
+
 ### CloudFront
   - CDN
   - Structure:
     - Distribution
     - Original Content
     - Unique CloudFront URL will be generated
+  - Global CDN to Reduce Latency
+  - Edging the location that is closer to your users
 
 ### CloudWatch
   - Monitoring resources

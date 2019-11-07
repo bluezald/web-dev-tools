@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Resources:
+  MyLambdaFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Runtime: nodejs8.10
+      Handler: index.handler
+      CodeUri:
+        Bucket: artifacts-for-lambda
+        Key: my-lambda-package.zip
+      Events:
+        MySchedule:
+          Type: Schedule
+          Properties:
+            Schedule: rate(1 minute)
+        MyS3Upload:
+          Type: S3
+          Properties:
+            Bucket: !Ref MyS3Bucket
+            Events: s3:ObjectCreated:*
+        MyApiResource:
+          Type: Api
+          Properties:
+            Path: /my-resource
+            Method: get
+  MyS3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: upload-something-here
