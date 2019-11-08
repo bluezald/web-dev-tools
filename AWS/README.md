@@ -93,6 +93,8 @@ aws s3 cp <local_folder> s3://<bucket>/<remote_folder> --recursive --exclude "<p
 </CORSConfiguration>
 ```
 
+- Because of the highly distributed nature of S3, it can take a while for the deletion to be propagated, we do not recommend "to create or delete buckets on the high-availability code path of your application. It is better to create or delete buckets in a separate initialization or setup routine that you run less often" (http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html).
+
 ### RDS (Relational Database Service)
   - Managed database
   - RDS dbs run on EC2 instances
