@@ -185,11 +185,17 @@ Sample Policy:
 }
 ```
 
-
-
 ### DynamoDB - Managed NoSQL
   - Unlimited, elastic storage
   - no hardware choices
+  - **marshall** or **unmarshall** - object format in DynamoDB
+```js
+{
+  "id": {
+    "S": "fa567454-534sdsd-434dsds-223-dsdde2332" // where S is the type of the value
+  }
+}
+```
 
 ### VPC (Virtual Private Cloud)
   - easily secure access to AWS resources

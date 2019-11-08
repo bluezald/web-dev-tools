@@ -16,3 +16,6 @@ aws cloudformation deploy --template-file sam-template.yaml --stack-name my-serv
 
 **Intrinsinc Function Reference**
   - Use intrinsic functions in your templates to assign values to properties that are not available until runtime.
+
+## template2
+- Credits to this [code](https://github.com/byumark/sam-library-lambda) for the code in template 2
