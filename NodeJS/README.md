@@ -63,3 +63,10 @@ Node.js - a wrapper around a VM like `V8`
 ## Node's REPL
 - Read, Eval, Print and Loop
 
+## When updating a new version of node
+
+```
+npm rebuild node-sass
+sudo npm rebuild node-sass
+```
+on a project
