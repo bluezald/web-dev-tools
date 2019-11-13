@@ -55,6 +55,8 @@ scp -r -i keys.pem ./art-toolset/ ec2-user@13.251.162.166:/home/ec2-user/art-too
 - **Security Groups**:
   - an `inbound` firewall protects the network against incoming traffic from the internet or other network segments, namely disallowed connections, malware and denial-of-service attacks. An `outbound` firewall protects against outgoing traffic originating inside an enterprise network. Often, a single firewall can serve both functions.
 
+
+
 ### S3 (Simple Storage Service) - Hosting service
   - max file size is 5 TB
   - S3 Object - file + metadata = max object size is 5 TB
@@ -94,6 +96,17 @@ aws s3 cp <local_folder> s3://<bucket>/<remote_folder> --recursive --exclude "<p
 ```
 
 - Because of the highly distributed nature of S3, it can take a while for the deletion to be propagated, we do not recommend "to create or delete buckets on the high-availability code path of your application. It is better to create or delete buckets in a separate initialization or setup routine that you run less often" (http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html).
+
+- Storage for video, photo or music
+- data backup and storage for other services such as EBS snapshots and AMI templates
+- Hosting static websites
+- Host your software application installers that clients can download
+- is an object storage, can not be used for software installation
+- Storage can be specified to a region, for compliance and latency
+- If you upload an object with the same name inside the bucket, it will overwrite the file and reset the properties of the object
+
+### Encryption
+- **Server-side Encryption in S3** - set default encryption to the bucket so that all objects are encrypted when stored
 
 ### RDS (Relational Database Service)
   - Managed database
@@ -227,8 +240,3 @@ Sample Policy:
   - Alarm when some metrics are triggered
 
 #### SNS (Simple Notification Service)
-
-## AWS CLI
-```
-pip install awscli
-```
