@@ -57,3 +57,6 @@
 - Both provide the ability to easily deploy an application and scale it, without having to provision or configure servers.
 - References:
     - https://stackify.com/function-as-a-service-serverless-architecture/
+
+- References:
+    - https://medium.com/@oscar_reyes/basic-serverless-tutorial-with-node-js-1ee09441ee3e

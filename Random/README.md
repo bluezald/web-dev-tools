@@ -34,3 +34,6 @@ global installs have "links" created from the global bin/ directory (e.g. /usr/l
 
 ## CSR vs SSR
 - Nice and short explaination of CSR and SSR - https://dev.to/akhilaariyachandra/client-side-rendering-vs-server-side-rendering-2o4o?ref=devawesome.io
+
+## DevOps vs SysOps
+- DevOps and SysOps are very large areas of the cloud computing where DevOps manages the activities related to operation and development while SysOps manages the activities that are related to operations and systems.
