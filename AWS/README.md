@@ -240,3 +240,4 @@ Sample Policy:
   - Alarm when some metrics are triggered
 
 #### SNS (Simple Notification Service)
+
