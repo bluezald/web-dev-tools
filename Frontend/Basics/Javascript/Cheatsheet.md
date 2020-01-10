@@ -51,5 +51,20 @@ console.log(urlParams.getAll('action')); // ["edit"]
 console.log(urlParams.toString()); // "?post=1234&action=edit"
 console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
 ```
+
+## XHR
+
+### Loading remote text file from a repo
+```js
+var request = new XMLHttpRequest();
+request.open('GET', githubUrl, true);
+request.send(null);
+request.onreadystatechange = function () {
+	if (request.readyState === 4 && request.status === 200) {
+		console.log(request.responseText)
+	}
+}
+```
+
 - References:
 	- https://davidwalsh.name/query-string-javascript
