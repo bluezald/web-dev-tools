@@ -74,6 +74,9 @@
 - References:
     - https://it.toolbox.com/guest-article/demystifying-apis-and-microservices-discover-the-importance-of-apis-and-microservices-to-modern-businesses
 
+### API Gateway
+- An API gateway is the conductor that organizes the requests being processed by the microservices architecture to create simplified experience for the user. It's a translator, taking a client's many requests and turning them into just one, to reduce the number of round trips between the client and application.
+
 ### Token
 #### JWT (JSON Web Token)
 - is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with HMAC algorithm) or a public/private key pair using RSA.

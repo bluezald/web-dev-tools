@@ -238,6 +238,16 @@ Sample Policy:
 ### CloudWatch
   - Monitoring resources
   - Alarm when some metrics are triggered
+  - **Metrics** - represent a time-ordered set of data points that are published to CloudWatch. A variable to monitor and the data points are the values of that variable over time.
 
 #### SNS (Simple Notification Service)
 
+## CI/CD in AWS
+
+### Code Deploy
+- Automate your deployments
+- fully managed serverless service
+- **Components**
+  - Application
+  - Deployment Group (Staging/Production)
+  - Deployment - one particular revision or deployment group
