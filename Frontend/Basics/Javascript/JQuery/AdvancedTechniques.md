@@ -20,7 +20,7 @@
             context.strokeRect(left, top, width, height);
         }
     }
-    
+
 }
 ```
 

@@ -1,5 +1,8 @@
 # Security
 
+## CSRF (Cross-site Request Forgery)
+- In a CSRF attack an innocent end user is tricked by an attacker into submitting a web request that they did not intend. This may cause actions to be performed on the website that can include inadvertent client or server data leakage, change of session state, or manipulation of an end user's account.
+
 ## Tools:
 - https://observatory.mozilla.org/analyze/
 
