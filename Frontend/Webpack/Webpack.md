@@ -50,7 +50,25 @@ At its core, webpack is a static module bundler for modern JavaScript applicatio
       }
     };
     ```
-* Plugins
-* Mode
-* Browser Compatibility
+* Plugins - can be use to perfrom wider range of tasks
+  - In order to use a plugin, you need to require() it and add it to the plugins array. Most plugins are customizable through options. Since you can use a plugin multiple times in a config for different purposes, you need to create an instance of it by calling it with the new operator.
+  ```js
+  const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
+  const webpack = require('webpack'); //to access built-in plugins
+
+  module.exports = {
+    module: {
+      rules: [
+        { test: /\.txt$/, use: 'raw-loader' }
+      ]
+    },
+    plugins: [
+      new HtmlWebpackPlugin({template: './src/index.html'})
+    ]
+  };
+  ```
+* Mode - development, production or none
+* Browser Compatibility - webpack supports all browsers that are ES5-compliant (IE8 and below are not supported). webpack needs Promise for import() and require.ensure(). If you want to support older browsers, you will need to load a polyfill before using these expressions.
+
+- **webpack** runs on Node.js version 8.x and higher.
 
