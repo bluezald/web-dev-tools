@@ -26,6 +26,11 @@ global installs have "links" created from the global bin/ directory (e.g. /usr/l
 ## WebSocket
 - WebSocket is a computer communications protocol, providing full-duplex communication channels over a single TCP connection
 
+## WebSocket vs API
+- WebSocket application like Chat application, REST is to common web-apps with lots of GET request
+- WebSocket is a low-level protocol, based on the concept of socket and port, which are the underlying transport mechanism whereas REST is based on CRUD operation.
+- https://www.educba.com/websocket-vs-rest/
+
 ## Storing Secrets in the Environment
 - storing database password, access tokens and credentials -- add to a `.env` file
 

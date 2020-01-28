@@ -199,6 +199,8 @@ Sample Policy:
   ]
 }
 ```
+- **Inline policies** are policies that you create and manage and embed directly into a single user, group, or role. 
+
 
 ### DynamoDB - Managed NoSQL
   - Unlimited, elastic storage
@@ -251,3 +253,6 @@ Sample Policy:
   - Application
   - Deployment Group (Staging/Production)
   - Deployment - one particular revision or deployment group
+
+### API Gateway
+- **Edge optimized** are best for public services being accessed from the Internet. Regional endpoints are typically used for APIs that are accessed primarily from within the same AWS Region.

@@ -8,6 +8,8 @@ pip install awscli
 aws configure
 ```
 
+- Configuring multiple profiles: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
+
 ## S3
 ```sh
 aws s3 cp /source /destination
