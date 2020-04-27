@@ -24,6 +24,12 @@ docker rmi -f docker-spa
 ## Demo
 - In sample1 directory, make sure to run ```npm i``` before starting it.
 
+# Container Orchestration
+- Deploying and scaling containers
+
+## Kubernetes
+-  automate scaling and management of containerized applications
+
 - References:
     - http://jasonwilder.com/blog/2014/10/13/a-simple-way-to-dockerize-applications/
     - https://github.com/jwilder/dockerize
