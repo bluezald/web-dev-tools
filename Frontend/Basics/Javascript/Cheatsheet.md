@@ -1,3 +1,4 @@
+# Vanilla Javascript
 ## Array
 ### slice()
 - returns the selected elements in an array, as a new array object.
@@ -64,6 +65,24 @@ request.onreadystatechange = function () {
 		console.log(request.responseText)
 	}
 }
+```
+# jQuery
+
+## UI Filter Search
+```js
+$(`#input_search`).on("keyup", function () {
+let value = $(this).val().toLowerCase()
+$("#table_body tr").filter(function () {
+$(this)
+  .toggle(
+    $(this)
+      .children()[0]
+      .innerText
+      .toLowerCase()
+      .indexOf(value) > -1
+  )
+})
+})
 ```
 
 - References:
